@@ -5,23 +5,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>HOC Deezer Project</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="app/css/" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/search.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/widget.css" />
 </head>
-<body onload="init()">
-    
+<body>
 
+    <div id="autocomplete">
+        <h1>Deezer API</h1>
+        <h3>Made by Quentin & Clément</h3>
+        <small>Search for artists</small>
+        <input type="text" id="textInput" />
+        <div id="suggestion-container">
+            <ul id="suggestion"></ul>
+        </div>
+    </div>
+    <div id="track">
+            <!-- <iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=playlist&id=30595446&app_id=1" width="572.5" height="300"></iframe> -->
+    </div>
+
+    
     <!-- Appel de jQuery pour les méthodes AJAX -->
     <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
     <!-- Appels de nos classes -->
     <script type="text/javascript" src="app/js/app.js"></script>
-    <script type="text/javascript" src="app/js/searchData.js"></script>
-    <script type="text/javascript" src="app/js/viewArtist.js"></script>
+    <script type="text/javascript" src="app/js/searchEngine.js"></script>
+    <script type="text/javascript" src="app/js/track.js"></script>
     <script type="text/javascript" src="app/js/autoComplete.js"></script>
     <script type="text/javascript">
-        function init(){
-            const app = new App();
-            app.init();
-        }
+       $(document).ready(function(){
+           const app = new App();
+           app.init();
+       });    
     </script>
 </body>
 </html>
