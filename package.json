@@ -1,0 +1,30 @@
+{
+  "name": "hoc-deezer-project",
+  "version": "1.0.0",
+  "description": "Widget de recherche via l'API Deezer par Quentin et Clément",
+  "main": "app/js/app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel app/js -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClementBallet/hoc-deezer-project.git"
+  },
+  "author": "Quentin et Clément",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClementBallet/hoc-deezer-project/issues"
+  },
+  "homepage": "https://github.com/ClementBallet/hoc-deezer-project#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^7.0.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-uglify": "^3.0.0",
+    "pump": "^3.0.0"
+  }
+}
