@@ -1,0 +1,262 @@
+body {
+	background-color: lightgrey;
+}
+.container {
+	width: 400px;
+	height: 500px;
+	background-color: #000000;
+	margin: auto;
+	border-radius: 20px;
+	position: relative;
+	color: #fa733c;
+}
+/**************** HEADER **************/
+
+.bg1 {
+	width: 400px;
+	height: 100px;
+	position: absolute;
+	background-color: #fa733c;
+	border-top-left-radius: 20px;
+	border-top-right-radius: 20px;
+}
+.logo {
+	width: 100px;
+	height: 57px;
+	background-image: url('Deezer_logo.png');
+	background-size: cover;
+	margin: 18px auto;
+}
+.menu {
+	position: absolute;
+	top: 12px;
+	left: -5px;
+}
+.line1 {
+	width: 25px;
+	height: 4px;
+	position: absolute;
+	top: 40px;
+	left: 350px;
+	background-color: #e05a25;
+}
+.line2 {
+	width: 25px;
+	height: 4px;
+	position: absolute;
+	top: 33px;
+	left: 350px;
+	background-color: #e05a25;
+}
+.line3 {
+	width: 25px;
+	height: 4px;
+	position: absolute;
+	top: 26px;
+	left: 350px;
+	background-color: #e05a25;
+}
+/*************** MAIN *****************/
+.bg2 {
+	position: relative;
+	top: 100px;
+	width: 400px;
+	height: 370px;
+	display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.bg2::before {
+	content: ' ';
+	display: block;
+	position: absolute;
+	left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.6;
+	background: url('https://s-media-cache-ak0.pinimg.com/736x/eb/08/3b/eb083b6dcb29b8093b0fb964d57d235f.jpg');
+	background-position: center;
+	background-size: cover;
+}
+.album, .title, .author, .play {
+	margin: auto;
+	z-index: 999;
+}
+.album {
+	color: #ffffff;
+	font-size: 16px;
+}
+.title {
+	color: #ffffff;
+	font-size: 20px;
+	font-weight: bold;
+}
+.author {
+	color: #ffffff;
+	font-size: 25px;
+	font-weight: bold;
+}
+.play {
+	width: 80px;
+	height: 80px;
+	background-color: #fa733c;
+	border-radius: 100px;
+	opacity: .7;
+}
+.button1 {
+	width: 0;
+	height: 0;
+	border-top: 20px solid transparent;
+	border-left: 35px solid #ffffff;
+	border-bottom: 20px solid transparent;
+	margin: 19px 0px 0px 27px;
+}
+/* .left {
+	position: relative;
+} */
+.button2 {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 20px solid #ffffff;
+	border-bottom: 10px solid transparent;
+	opacity: .5;
+}
+.button3 {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-right: 20px solid #f7f7f7;
+	border-bottom: 10px solid transparent;
+	opacity: .5;
+}
+/* .right {
+	position: relative;
+} */
+.button4 {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid #ffffff;
+	border-bottom: 10px solid transparent;
+	opacity: .5;
+}
+.button5 {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid #f7f7f7;
+	border-bottom: 10px solid transparent;
+	opacity: .5;
+}
+/************* FOOTER *****************/
+.bg3 {
+	width: 400px;
+	height: 75px;
+	position: absolute;
+	top: 458px;
+	background-color: #101417;
+	border-top: 2px solid #1a1b1e;
+	border-bottom-left-radius: 20px;
+	border-bottom-right-radius: 20px;
+}
+.songs {
+	position: absolute;
+	top: 25px;
+	left: 19px;
+	width: 0;
+	height: 0;
+	border-top: 8px solid transparent;
+	border-left: 15px solid #616264;
+	border-bottom: 8px solid transparent;
+}
+.songs p {
+	position: absolute;
+	color: #616264;
+	top: -27.5px;
+	left: 9px;
+	font-weight: bold;
+}
+.line4 {
+	width: 2px;
+	height: 75px;
+	position: absolute;
+	left: 100px;
+	background-color: #1a1b1e;
+}
+.likes {
+	position: absolute;
+	top: 12px;
+	left: 103px;
+	width: 55px;
+}
+.like01, .like02, .like03, .like04, .like05 {
+	position: absolute;
+    top: 12px;
+    width: 55px;
+} 
+.like01 {
+    left: 9px;
+}
+.like02 {
+    left: 39px;
+}
+.like03 {
+    left: 69px;
+}
+.like04 {
+    left: 99px;
+}
+.like05 {
+    left: 129px;
+}
+.likes p {
+	position: absolute;
+	color: #616264;
+	top: -6px;
+	left: 48px;
+	font-weight: bold;
+}
+.line5 {
+	width: 2px;
+	height: 75px;
+	position: absolute;
+	left: 200px;
+	background-color: #1a1b1e;
+}
+.repeat {
+	width: 70px;
+	position: absolute;
+	top: 10px;
+	left: 203px;
+}
+.repeat p {
+	font-weight: bold;
+	color: #616264;
+	position: absolute;
+	top: -4px;
+	left: 47px;
+}
+.line6 {
+	width: 2px;
+	height: 75px;
+	position: absolute;
+	left: 300px;
+	background-color: #1a1b1e;
+}
+.comments {
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	left: 296px;
+	top: 7px;
+}
+.comments p {
+	font-weight: bold;
+	color: #616264;
+	position: absolute;
+	top: -1px;
+	left: 54px;
+}

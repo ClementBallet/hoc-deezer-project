@@ -18,6 +18,7 @@ ul {
 li {
     padding: 2px 18px;
     cursor: pointer;
+    display: flex;
 }
 
 li:hover {
@@ -53,12 +54,18 @@ input:focus {
 }
 
 #suggestion-container {
-    border: 1px solid #cceefc;
+    /* border: 1px solid #cceefc; */
     background: #f0fbff;
     text-align: left;
 }
 
 #suggestion img {
-    width: 90px;
+    width: 120px;
+}
+
+.results {
+    width: 100%;
+    margin: auto;
+    padding-left: 20px;
 }
 

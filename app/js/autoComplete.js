@@ -45,8 +45,9 @@
         
             for(let i = 0; i < data.data.length; i++) {
                 let track = data.data[i];
-
-                listLiHtml += '<li id="'+ track.id +'" >'+ '<img src =' + track.album.cover + ">" + "<span>" + track.title + " - " + track.artist.name + '</span></li>';
+                console.log(track);
+                
+                listLiHtml += '<li id="'+ track.id +'" >'+ '<img src =' + track.album.cover + ">" + "<div class='results'><div>Track: " + track.title + " </div><div>Artist: " + track.artist.name + "</div><div>Album: " + track.album.title + '</div></div></li>';
             }
 
             this.suggestionContainer.show();
@@ -59,15 +60,19 @@
     onChooseTrack(event) {
         this.close();
 
-        let iframeContainer = $("#track");
-        let iframe = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=';
         let idTrack = event.currentTarget.id;
-        let iframeEnd = '&app_id=1" width="572.5" height="600"></iframe>';
-
-        iframe += idTrack + iframeEnd;
         
-        iframeContainer.html(iframe);
-        console.log(iframe);
+        this.app.searchEngine.callAPITrack(idTrack);
+        
+        // let iframeContainer = $("#track");
+        // let iframe = '<iframe scrolling="no" frameborder="0" allowTransparency="true" src="https://www.deezer.com/plugins/player?format=square&autoplay=false&playlist=false&width=300&height=300&color=007FEB&layout=dark&size=medium&type=tracks&id=';
+        // let idTrack = event.currentTarget.id;
+        // let iframeEnd = '&app_id=1" width="572.5" height="600"></iframe>';
+
+        // iframe += idTrack + iframeEnd;
+        
+        // iframeContainer.html(iframe);
+        // console.log(iframe);
         
     }
 

@@ -43,7 +43,31 @@ class SearchEngine {
     }
 
     callAPITrack(idTrack) {
+        console.log('call api track', idTrack)
 
+        // Appel AJAX de l'API
+        let self = this;
+
+        $.ajax({
+            method: "GET",
+            url: this.urlAPI + '/track/' + idTrack + "?output=jsonp", 
+            dataType: "jsonp",
+            crossDomain: true
+        }).done(function(data) {
+            // fonction lancée au retour de l'appel
+            console.log('data', data);
+
+            // render autocomplete
+            
+            self.app.showTrack(data);
+
+        }).fail(function(error) {
+            // Si une erreur survient lors de l'appel
+            console.warn(error);
+            
+        });
+
+        
     }
 
 }

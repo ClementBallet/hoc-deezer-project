@@ -22,6 +22,6 @@ class App {
 
     showTrack(data) {
         // On instancie la classe track
-        // this.Track = new Track(this);
+        this.Track = new Track(this, data);
     }
 }
